@@ -1,0 +1,2 @@
+. spring that makes the player jump really high
+. platforms that turn invisible
