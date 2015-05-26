@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
 	float forwardSpeedBackUp;
     Vector3 startPos;
     bool hasJumped = false;
+	float end = 0f;
 
 	// Use this for initialization
 	void Start ()
@@ -48,7 +49,8 @@ public class Movement : MonoBehaviour
 		// Perpetually moves forward and makes the player move left and right
 		GetComponent<Rigidbody> ().velocity = new Vector3 (h * Time.deltaTime * turnSpeed, 
 		                                                   GetComponent<Rigidbody> ().velocity.y, 
-		                                                   forwardSpeed * Time.deltaTime);	
+		                                                   forwardSpeed * Time.deltaTime);
+		Debug.Log (Time.deltaTime * forwardSpeed);
 	}
 
 	// Returns true if the player is on the ground. Duh
@@ -114,5 +116,10 @@ public class Movement : MonoBehaviour
         {
             forwardSpeed = 0f;
         }
+
+		void iDebug ()
+		{
+
+		}
 	}
 }
