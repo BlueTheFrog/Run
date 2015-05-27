@@ -9,7 +9,6 @@ public class Movement : MonoBehaviour
 	float forwardSpeedBackUp;
     Vector3 startPos;
     bool hasJumped = false;
-	float end = 0f;
 
 	// Use this for initialization
 	void Start ()
@@ -17,29 +16,32 @@ public class Movement : MonoBehaviour
 		forwardSpeedBackUp = forwardSpeed;
         startPos = transform.position;
 	}
-	
-	// Update is called once per frame
+
 	void Update ()
 	{
-        // Puts the player back at the start if they fall off
-        if (transform.position.y < -40f)
-        {
-            transform.position = startPos;
-        }
+		// Puts the player back at the start if they fall off
+		if (transform.position.y < -40f)
+		{
+			transform.position = startPos;
+		}
 		// If the player is grounded and they press the jump button, jump
 		if (Input.GetAxisRaw("Jump") == 1f)
 		{
-            if (isGrounded() && !hasJumped)
-            {
-                GetComponent<Rigidbody>().AddForce(new Vector3(0f, jumpForce, 0f));
-            }
-            hasJumped = true;
+			if (isGrounded() && !hasJumped)
+			{
+				GetComponent<Rigidbody>().AddForce(new Vector3(0f, jumpForce, 0f));
+			}
+			hasJumped = true;
 		}
-        else
-        {
-            hasJumped = false;
-        }
-
+		else
+		{
+			hasJumped = false;
+		}
+	}
+		
+	// Update is called once per frame
+	void FixedUpdate ()
+	{			
 		// Recieves left and right input from the player
 		float h = Input.GetAxisRaw ("Horizontal");
 
@@ -47,10 +49,7 @@ public class Movement : MonoBehaviour
 		//restrictMovement ();
 
 		// Perpetually moves forward and makes the player move left and right
-		GetComponent<Rigidbody> ().velocity = new Vector3 (h * Time.deltaTime * turnSpeed, 
-		                                                   GetComponent<Rigidbody> ().velocity.y, 
-		                                                   forwardSpeed * Time.deltaTime);
-		Debug.Log (Time.deltaTime * forwardSpeed);
+		GetComponent<Rigidbody> ().velocity = new Vector3 (h * turnSpeed, GetComponent<Rigidbody> ().velocity.y, forwardSpeed);
 	}
 
 	// Returns true if the player is on the ground. Duh
@@ -116,10 +115,5 @@ public class Movement : MonoBehaviour
         {
             forwardSpeed = 0f;
         }
-
-		void iDebug ()
-		{
-
-		}
 	}
 }
