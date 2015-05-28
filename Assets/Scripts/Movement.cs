@@ -7,28 +7,22 @@ public class Movement : MonoBehaviour
 	public float turnSpeed;
 	public float jumpForce;
 	float forwardSpeedBackUp;
-    Vector3 startPos;
     bool hasJumped = false;
 
 	// Use this for initialization
 	void Start ()
 	{
 		forwardSpeedBackUp = forwardSpeed;
-        startPos = transform.position;
 	}
 
 	void Update ()
 	{
-		// Puts the player back at the start if they fall off
-		if (transform.position.y < -40f)
-		{
-			transform.position = startPos;
-		}
 		// If the player is grounded and they press the jump button, jump
 		if (Input.GetAxisRaw("Jump") == 1f)
 		{
 			if (isGrounded() && !hasJumped)
 			{
+				GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 0f, GetComponent<Rigidbody>().velocity.z);
 				GetComponent<Rigidbody>().AddForce(new Vector3(0f, jumpForce, 0f));
 			}
 			hasJumped = true;
@@ -56,7 +50,7 @@ public class Movement : MonoBehaviour
 	bool isGrounded ()
 	{
         BoxCollider bc = GetComponent<BoxCollider>();
-		if (Physics.Raycast(transform.position, Vector3.down, bc.size.y / 2f + 0.1f) ||
+		if (Physics.Raycast(transform.position, Vector3.down, bc.size.y / 2f + 0.3f) ||
             Physics.Raycast(new Vector3(transform.position.x + bc.size.x / 2f, transform.position.y, transform.position.z), Vector3.down, bc.size.y / 2f + 0.1f) ||
             Physics.Raycast(new Vector3(transform.position.x - bc.size.x / 2f, transform.position.y, transform.position.z), Vector3.down, bc.size.y / 2f + 0.1f))
 		{

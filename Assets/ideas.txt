@@ -1,2 +1,2 @@
 . spring that makes the player jump really high
-. platforms that turn invisible
+. platforms that turn alternate between being invisible and visible, but you can still land on them
