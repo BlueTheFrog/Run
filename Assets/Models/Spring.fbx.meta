@@ -1,0 +1,250 @@
+fileFormatVersion: 2
+guid: 145b3fd495b79a94387b6fca06ffc2c2
+timeCreated: 1432857130
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: BottomPart
+    100002: LeftArms
+    100004: MiddleSpring
+    100006: pCube1
+    100008: pCube1 1
+    100010: pCube2
+    100012: pCube2 1
+    100014: pCube3
+    100016: pCube3 1
+    100018: pCube4
+    100020: pCube4 1
+    100022: pPipe1
+    100024: pPipe1 1
+    100026: pPipe2
+    100028: pPipe2 1
+    100030: pPipe3
+    100032: pPipe3 1
+    100034: pPipe4
+    100036: pPipe4 1
+    100038: pPipe5
+    100040: pPipe5 1
+    100042: pPipe6
+    100044: pPipe6 1
+    100046: pSphere1
+    100048: pSphere1 1
+    100050: pSphere2
+    100052: pSphere2 1
+    100054: pSphere3
+    100056: pSphere3 1
+    100058: pSphere4
+    100060: pSphere4 1
+    100062: pSphere5
+    100064: pSphere5 1
+    100066: pSphere6
+    100068: pSphere6 1
+    100070: RightArms
+    100072: //RootNode
+    100074: TopPart
+    400000: BottomPart
+    400002: LeftArms
+    400004: MiddleSpring
+    400006: pCube1
+    400008: pCube1 1
+    400010: pCube2
+    400012: pCube2 1
+    400014: pCube3
+    400016: pCube3 1
+    400018: pCube4
+    400020: pCube4 1
+    400022: pPipe1
+    400024: pPipe1 1
+    400026: pPipe2
+    400028: pPipe2 1
+    400030: pPipe3
+    400032: pPipe3 1
+    400034: pPipe4
+    400036: pPipe4 1
+    400038: pPipe5
+    400040: pPipe5 1
+    400042: pPipe6
+    400044: pPipe6 1
+    400046: pSphere1
+    400048: pSphere1 1
+    400050: pSphere2
+    400052: pSphere2 1
+    400054: pSphere3
+    400056: pSphere3 1
+    400058: pSphere4
+    400060: pSphere4 1
+    400062: pSphere5
+    400064: pSphere5 1
+    400066: pSphere6
+    400068: pSphere6 1
+    400070: RightArms
+    400072: //RootNode
+    400074: TopPart
+    2300000: BottomPart
+    2300002: MiddleSpring
+    2300004: pCube1
+    2300006: pCube1 1
+    2300008: pCube2
+    2300010: pCube2 1
+    2300012: pCube3
+    2300014: pCube3 1
+    2300016: pCube4
+    2300018: pCube4 1
+    2300020: pPipe1
+    2300022: pPipe1 1
+    2300024: pPipe2
+    2300026: pPipe2 1
+    2300028: pPipe3
+    2300030: pPipe3 1
+    2300032: pPipe4
+    2300034: pPipe4 1
+    2300036: pPipe5
+    2300038: pPipe5 1
+    2300040: pPipe6
+    2300042: pPipe6 1
+    2300044: pSphere1
+    2300046: pSphere1 1
+    2300048: pSphere2
+    2300050: pSphere2 1
+    2300052: pSphere3
+    2300054: pSphere3 1
+    2300056: pSphere4
+    2300058: pSphere4 1
+    2300060: pSphere5
+    2300062: pSphere5 1
+    2300064: pSphere6
+    2300066: pSphere6 1
+    2300068: TopPart
+    2300070: //RootNode
+    3300000: BottomPart
+    3300002: MiddleSpring
+    3300004: pCube1
+    3300006: pCube1 1
+    3300008: pCube2
+    3300010: pCube2 1
+    3300012: pCube3
+    3300014: pCube3 1
+    3300016: pCube4
+    3300018: pCube4 1
+    3300020: pPipe1
+    3300022: pPipe1 1
+    3300024: pPipe2
+    3300026: pPipe2 1
+    3300028: pPipe3
+    3300030: pPipe3 1
+    3300032: pPipe4
+    3300034: pPipe4 1
+    3300036: pPipe5
+    3300038: pPipe5 1
+    3300040: pPipe6
+    3300042: pPipe6 1
+    3300044: pSphere1
+    3300046: pSphere1 1
+    3300048: pSphere2
+    3300050: pSphere2 1
+    3300052: pSphere3
+    3300054: pSphere3 1
+    3300056: pSphere4
+    3300058: pSphere4 1
+    3300060: pSphere5
+    3300062: pSphere5 1
+    3300064: pSphere6
+    3300066: pSphere6 1
+    3300068: TopPart
+    3300070: //RootNode
+    4300000: BottomPart
+    4300002: TopPart
+    4300004: MiddleSpring
+    4300006: pSphere4
+    4300008: pPipe4
+    4300010: pCube3
+    4300012: pSphere5
+    4300014: pPipe5
+    4300016: pCube4
+    4300018: pPipe6
+    4300020: pSphere6
+    4300022: pPipe2
+    4300024: pSphere2
+    4300026: pCube2
+    4300028: pPipe3
+    4300030: pSphere3
+    4300032: pCube1
+    4300034: pSphere1
+    4300036: pPipe1
+    4300038: pSphere4
+    4300040: pPipe4
+    4300042: pCube3
+    4300044: pSphere5
+    4300046: pPipe5
+    4300048: pCube4
+    4300050: pPipe6
+    4300052: pSphere6
+    4300054: pPipe2
+    4300056: pSphere2
+    4300058: pCube2
+    4300060: pPipe3
+    4300062: pSphere3
+    4300064: pCube1
+    4300066: pSphere1
+    4300068: pPipe1
+    4300070: Spring
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
