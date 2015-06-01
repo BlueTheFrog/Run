@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Movement : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class Movement : MonoBehaviour
 	void Update ()
 	{
 		// If the player is grounded and they press the jump button, jump
-		if (Input.GetAxisRaw("Jump") == 1f)
+		if (CrossPlatformInputManager.GetButtonDown("Jump"))
 		{
 			if (isGrounded() && !hasJumped)
 			{
@@ -31,13 +32,28 @@ public class Movement : MonoBehaviour
 		{
 			hasJumped = false;
 		}
+        if (CrossPlatformInputManager.GetButtonDown("Left"))
+        {
+            Debug.Log("hi");
+        }
 	}
 		
 	// Update is called once per frame
 	void FixedUpdate ()
-	{			
-		// Recieves left and right input from the player
-		float h = Input.GetAxisRaw ("Horizontal");
+	{
+		float h = 0f;
+		// Recieves left and right input from the player for PC
+        h = CrossPlatformInputManager.GetAxisRaw("Horizontal");
+
+        // Recieves left and right input for mobile
+        if (CrossPlatformInputManager.GetButton("Right"))
+        {
+            h += 1f;
+        }
+        if (CrossPlatformInputManager.GetButton("Left"))
+        {
+            h += -1f;
+        }
 
         // Makes sure the player doesn't get stuck when moving forward
 		//restrictMovement ();

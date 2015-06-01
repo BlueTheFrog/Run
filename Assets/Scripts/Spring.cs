@@ -20,7 +20,7 @@ public class Spring : MonoBehaviour
 		if (other.transform.tag == "Player")
 		{
 			other.transform.position = new Vector3 (other.transform.position.x, transform.position.y + transform.lossyScale.y * 0.5f, transform.position.z);
-			other.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
+			other.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, other.GetComponent<Rigidbody>().velocity.z);
 			other.GetComponent<Rigidbody>().AddForce(0f, bounceForce, 0f);
 		}
 	}
