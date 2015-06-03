@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
 	void Start ()
 	{
 		forwardSpeedBackUp = forwardSpeed;
+		Debug.Log (Application.platform.ToString());
 	}
 
 	void Update ()
@@ -32,10 +33,6 @@ public class Movement : MonoBehaviour
 		{
 			hasJumped = false;
 		}
-        if (CrossPlatformInputManager.GetButtonDown("Left"))
-        {
-            Debug.Log("hi");
-        }
 	}
 		
 	// Update is called once per frame
