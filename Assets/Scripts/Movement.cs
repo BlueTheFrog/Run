@@ -33,6 +33,11 @@ public class Movement : MonoBehaviour
 		{
 			hasJumped = false;
 		}
+
+		if (Input.GetKeyDown("escape"))
+		{
+			Application.LoadLevel(0);
+		}
 	}
 		
 	// Update is called once per frame

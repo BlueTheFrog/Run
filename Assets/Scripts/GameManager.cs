@@ -4,10 +4,19 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class GameManager : MonoBehaviour 
 {
+	public GameObject[] levelButtons;
 
 	// Use this for initialization
 	void Awake ()
 	{
+
+		if (!PlayerPrefs.HasKey("unlockedLevels"))
+		{
+			PlayerPrefs.SetInt("unlockedLevels", 1);
+		}
+
+		//DontDestroyOnLoad (this.gameObject);
+
 		if (Application.platform != RuntimePlatform.Android)
 		{
 		    CrossPlatformInputManager.SwitchActiveInputMethod (CrossPlatformInputManager.ActiveInputMethod.Hardware);
@@ -17,10 +26,24 @@ public class GameManager : MonoBehaviour
 			CrossPlatformInputManager.SwitchActiveInputMethod (CrossPlatformInputManager.ActiveInputMethod.Touch);
 		}
 	}
+
+	void Start ()
+	{
+		checkUnlockedLevels ();
+	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
 			
+	}
+
+	void checkUnlockedLevels ()
+	{
+		int unlockedLevels = PlayerPrefs.GetInt ("unlockedLevels");
+		for (int i = 0; i < unlockedLevels; i++)
+		{
+			Debug.Log("hi");
+		}
 	}
 }
