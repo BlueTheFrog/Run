@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 			PlayerPrefs.SetInt("unlockedLevels", 1);
 		}
 
-		//DontDestroyOnLoad (this.gameObject);
+		//PlayerPrefs.SetInt("unlockedLevels", 1);
 
 		if (Application.platform != RuntimePlatform.Android)
 		{
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 		int unlockedLevels = PlayerPrefs.GetInt ("unlockedLevels");
 		for (int i = 0; i < unlockedLevels; i++)
 		{
-			Debug.Log("hi");
+			levelButtons[i].SetActive(true);
 		}
 	}
 }

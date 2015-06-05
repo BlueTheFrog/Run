@@ -14,7 +14,6 @@ public class Movement : MonoBehaviour
 	void Start ()
 	{
 		forwardSpeedBackUp = forwardSpeed;
-		Debug.Log (Application.platform.ToString());
 	}
 
 	void Update ()
