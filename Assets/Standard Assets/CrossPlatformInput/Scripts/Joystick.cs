@@ -29,7 +29,6 @@ namespace UnityStandardAssets.CrossPlatformInput
 		{
             //m_StartPos = GetComponent<RectTransform>().anchoredPosition3D;
             m_StartPos = new Vector3(Screen.width / (642 / 141), Screen.height / (361 / 72), 0f);
-            Debug.Log(Screen.width);
 			CreateVirtualAxes();
 		}
 

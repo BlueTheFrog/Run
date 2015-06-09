@@ -12,13 +12,16 @@ public class LevelManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (CrossPlatformInputManager.GetButtonDown("ToMenu"))
-        {
-            Application.LoadLevel(0);
-        }
-	    if (CrossPlatformInputManager.GetButtonDown("ToNextLevel"))
-        {
-            Application.LoadLevel(int.Parse(Application.loadedLevel.ToString()) + 1);
-        }
+
 	}
+
+    public void toMenu ()
+    {
+        Application.LoadLevel(0);
+    }
+
+    public void toNextLevel ()
+    {
+        Application.LoadLevel(int.Parse(Application.loadedLevel.ToString()) + 1);
+    }
 }

@@ -10,13 +10,13 @@ namespace UnityStandardAssets.CrossPlatformInput
     [ExecuteInEditMode]
     public class MobileControlRig : MonoBehaviour
     {
-		void Awake ()
-		{
-		    if (Application.platform != RuntimePlatform.Android)
-	    	{
-				Destroy(this.gameObject);
-		    }
-		}
+        void Awake()
+        {
+            if (Application.platform != RuntimePlatform.Android)
+            {
+                Destroy(this.gameObject);
+            }
+        }
         // this script enables or disables the child objects of a control rig
         // depending on whether the USE_MOBILE_INPUT define is declared.
 

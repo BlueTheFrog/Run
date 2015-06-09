@@ -3,6 +3,7 @@ using System.Collections;
 
 public class WinTrigger : MonoBehaviour
 {
+    public GameObject panel;
 
 	// Use this for initialization
 	void Start ()
@@ -20,6 +21,7 @@ public class WinTrigger : MonoBehaviour
 	{
 		if (other.transform.tag == "Player")
 		{
+            panel.GetComponent<Animator>().SetBool("Activate", true);
 			other.GetComponent<Movement>().enabled = false;
 			other.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
 			other.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 0f, 1500f));
