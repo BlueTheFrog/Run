@@ -10,7 +10,7 @@ namespace UnityStandardAssets.CrossPlatformInput
     [ExecuteInEditMode]
     public class MobileControlRig : MonoBehaviour
     {
-        void Awake()
+        void Awake ()
         {
             if (Application.platform != RuntimePlatform.Android)
             {
