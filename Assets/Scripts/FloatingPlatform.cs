@@ -20,7 +20,10 @@ public class FloatingPlatform : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		transform.position = new Vector3(transform.position.x, height * Mathf.Sin(speed * x) + startPos.y, transform.position.z);
+		//transform.position = new Vector3(transform.position.x, height * Mathf.Sin(speed * x) + startPos.y, transform.position.z);
+		GetComponent<Rigidbody>().MovePosition(new Vector3(transform.position.x, height * Mathf.Sin(speed * x) + startPos.y, transform.position.z));
+		//GetComponent<Rigidbody>().velocity = new Vector3(transform.position.x, height * Mathf.Sin(speed * x) + startPos.y, transform.position.z);
+		//GetComponent<Rigidbody>().AddForce(new Vector3(transform.position.x, height * Mathf.Sin(speed * x) + startPos.y, transform.position.z));
 		x += Time.deltaTime;
 	}
 }

@@ -47,11 +47,11 @@ public class Movement : MonoBehaviour
         h = CrossPlatformInputManager.GetAxisRaw("Horizontal");
 
         // Recieves left and right input for mobile
-        if (CrossPlatformInputManager.GetButton("Right"))
+        if (CrossPlatformInputManager.GetButton("Right") && !Input.GetKey("right"))
         {
             h += 1f;
         }
-        if (CrossPlatformInputManager.GetButton("Left"))
+        if (CrossPlatformInputManager.GetButton("Left") && !Input.GetKey("left"))
         {
             h += -1f;
         }
