@@ -1,2 +1,5 @@
+DEADLINE: T-3 DAYS TO WORK ON THIS
+
 - Create spring texture
-- Finish level 3
+- Create platforms that move horizontally and the player can actually stand on them
+- Finish level 4

@@ -77,55 +77,7 @@ public class Movement : MonoBehaviour
 		return false;
 	}
 
-	void restrictMovement ()
+	void OnCollisionEnter ()
 	{
-		forwardSpeed = forwardSpeedBackUp;
-        BoxCollider bc = GetComponent<BoxCollider>();
-
-		// Top Left
-		if (Physics.Raycast(new Vector3(transform.position.x - bc.size.x / 2f, transform.position.y + bc.size.y / 2f, transform.position.z), Vector3.forward, bc.size.z / 2 + 0.1f))
-		{
-			forwardSpeed = 0f;
-		}
-		// Top
-		if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + bc.size.y / 2f, transform.position.z), Vector3.forward, GetComponent<BoxCollider>().size.z / 2 + 0.1f))
-		{
-			forwardSpeed = 0f;
-		}
-		// Top Right
-        if (Physics.Raycast(new Vector3(transform.position.x + bc.size.x / 2f, transform.position.y + bc.size.y / 2f, transform.position.z), Vector3.forward, GetComponent<BoxCollider>().size.z / 2 + 0.1f))
-		{
-			forwardSpeed = 0f;
-		}
-		// Left
-        if (Physics.Raycast(new Vector3(transform.position.x - bc.size.x / 2f, transform.position.y, transform.position.z), Vector3.forward, GetComponent<BoxCollider>().size.z / 2 + 0.1f))
-		{
-			forwardSpeed = 0f;
-		}
-        // Middle
-        if (Physics.Raycast(transform.position, Vector3.forward, GetComponent<BoxCollider>().size.z / 2 + 0.1f))
-        {
-            forwardSpeed = 0f;
-        }
-        // Right
-        if (Physics.Raycast(new Vector3(transform.position.x + bc.size.x / 2f, transform.position.y, transform.position.z), Vector3.forward, GetComponent<BoxCollider>().size.z / 2 + 0.1f))
-        {
-            forwardSpeed = 0f;
-        }
-        // Bottom Left
-        if (Physics.Raycast(new Vector3(transform.position.x - bc.size.x / 2f, transform.position.y - bc.size.y / 2f, transform.position.z), Vector3.forward, GetComponent<BoxCollider>().size.z / 2 + 0.1f))
-        {
-            forwardSpeed = 0f;
-        }
-        // Bottom
-        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y - bc.size.y / 2f, transform.position.z), Vector3.forward, GetComponent<BoxCollider>().size.z / 2 + 0.1f))
-        {
-            forwardSpeed = 0f;
-        }
-        // Bottom Right
-        if (Physics.Raycast(new Vector3(transform.position.x + bc.size.x / 2f, transform.position.y - bc.size.y / 2f, transform.position.z), Vector3.forward, GetComponent<BoxCollider>().size.z / 2 + 0.1f))
-        {
-            forwardSpeed = 0f;
-        }
-	}
+		if (
 }
