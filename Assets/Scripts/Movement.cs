@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
 	void Start ()
 	{
 		forwardSpeedBackUp = forwardSpeed;
+        CrossPlatformInputManager.SwitchActiveInputMethod(CrossPlatformInputManager.ActiveInputMethod.Hardware);
 	}
 
 	void Update ()

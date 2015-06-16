@@ -1,3 +1,2 @@
-- Create finish line texture
 - Create spring texture
-- Finish Level 2
+- Finish level 3
