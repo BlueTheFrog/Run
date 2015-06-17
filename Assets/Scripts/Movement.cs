@@ -77,7 +77,11 @@ public class Movement : MonoBehaviour
 		return false;
 	}
 
-	void OnCollisionEnter ()
+	void OnCollisionEnter (Collision other)
 	{
-		if (
+		if (other.gameObject.tag == "test")
+        {
+            Debug.Log("hi");
+        }
+    }
 }
