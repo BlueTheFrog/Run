@@ -68,7 +68,7 @@ public class Movement : MonoBehaviour
 	bool isGrounded ()
 	{
         BoxCollider bc = GetComponent<BoxCollider>();
-		if (Physics.Raycast(transform.position, Vector3.down, bc.size.y / 2f + 0.3f) ||
+		if (Physics.Raycast(transform.position, Vector3.down, bc.size.y / 2f + 0.2f) ||
             Physics.Raycast(new Vector3(transform.position.x + bc.size.x / 2f, transform.position.y, transform.position.z), Vector3.down, bc.size.y / 2f + 0.1f) ||
             Physics.Raycast(new Vector3(transform.position.x - bc.size.x / 2f, transform.position.y, transform.position.z), Vector3.down, bc.size.y / 2f + 0.1f))
 		{
@@ -76,12 +76,4 @@ public class Movement : MonoBehaviour
 		}
 		return false;
 	}
-
-	void OnCollisionEnter (Collision other)
-	{
-		if (other.gameObject.tag == "test")
-        {
-            Debug.Log("hi");
-        }
-    }
 }

@@ -26,4 +26,12 @@ public class FloatingPlatform : MonoBehaviour
 		//GetComponent<Rigidbody>().position = new Vector3(transform.position.x, height * Mathf.Sin(speed * x) + startPos.y, transform.position.z);
 		x += Time.fixedDeltaTime;
 	}
+
+	void OnCollisionEnter (Collision other)
+	{
+		if (other.transform.tag == "Player")
+		{
+			transform.parent = other.gameObject;
+		}
+	}
 }
