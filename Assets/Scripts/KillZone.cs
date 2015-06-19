@@ -20,9 +20,13 @@ public class KillZone : MonoBehaviour
 
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.transform.tag == "Player")
+		if (other.transform.tag == "Player" && Application.loadedLevel != 4)
 		{
 			other.transform.position = spawnPos;
 		}
+        else if (other.transform.tag == "Player" && Application.loadedLevel == 4)
+        {
+            Application.LoadLevel(4);
+        }
 	}
 }

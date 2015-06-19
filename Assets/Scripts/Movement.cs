@@ -7,14 +7,12 @@ public class Movement : MonoBehaviour
 	public float forwardSpeed;
 	public float turnSpeed;
 	public float jumpForce;
-	float forwardSpeedBackUp;
     bool hasJumped = false;
 
 	// Use this for initialization
 	void Start ()
 	{
-		forwardSpeedBackUp = forwardSpeed;
-        CrossPlatformInputManager.SwitchActiveInputMethod(CrossPlatformInputManager.ActiveInputMethod.Hardware);
+        //CrossPlatformInputManager.SwitchActiveInputMethod(CrossPlatformInputManager.ActiveInputMethod.Hardware);
 	}
 
 	void Update ()
